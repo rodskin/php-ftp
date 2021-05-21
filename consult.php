@@ -1,4 +1,7 @@
 <?php
+if (!is_file('config.php')) {
+    die('config file missing');
+}
 require_once('config.php');
 
 $params = getopt(null, ['path:']);
